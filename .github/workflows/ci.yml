@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   run-build:
-    uses: "oezcan-guezelsarslan/cicdtemplates/.github/workflows/ci.yml@v1.0.0"
+    uses: "oezcan-guezelsarslan/cicdtemplates/.github/workflows/ci.yml@v1.1.0"
     permissions:
       contents: write
       packages: write
