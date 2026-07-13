@@ -1,0 +1,23 @@
+name: Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  run-build:
+    uses: "oezcan-guezelsarslan/cicdtemplates/.github/workflows/ci.yml@main"
+    permissions:
+      contents: write
+      packages: write
+      security-events: write
+    secrets:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
