@@ -18,6 +18,8 @@ permissions:
 jobs:
   run-build:
     uses: "oezcan-guezelsarslan/cicdtemplates/.github/workflows/ci.yml@v1.3.0"
+    with:
+      target-branch: ${{ github.head_ref || github.ref_name }}
     permissions:
       contents: write
       packages: write
